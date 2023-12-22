@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TaskBeats</string>
+    <string name="descripcion_del_de_arriba">Descripcion del de arriba</string>
 </resources>
