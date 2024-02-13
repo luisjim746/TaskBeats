@@ -17,6 +17,7 @@ object RetrofitModule {
         }
 
         val apiKey = BuildConfig.API_KEY
+
         val client: OkHttpClient = OkHttpClient.Builder()
             .addInterceptor(logging)
             .build()
