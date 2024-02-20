@@ -8,7 +8,6 @@ import com.comunidadedevspace.taskbeats.data.remote.NewsDto
 import com.comunidadedevspace.taskbeats.data.remote.NewsService
 import com.comunidadedevspace.taskbeats.data.remote.RetrofitModule
 import kotlinx.coroutines.launch
-import android.util.Log
 
 
 class NewsListViewModel(
@@ -25,8 +24,9 @@ class NewsListViewModel(
     private fun getNewsList(){
         viewModelScope.launch {
             try {
-                val response = newsService.fetchNews()
-                _newsListLiveData.value = response.data
+                val topNews = newsService.fetchTopNews().data
+                val allNews = newsService.fetchAllNews().data
+                _newsListLiveData.value = topNews + allNews
             } catch (ex: Exception) {
                 ex.printStackTrace()
             }

@@ -5,9 +5,11 @@ import com.comunidadedevspace.taskbeats.data.remote.NewsDto
 import com.comunidadedevspace.taskbeats.data.remote.NewsResponse
 import com.comunidadedevspace.taskbeats.data.remote.NewsService
 import com.comunidadedevspace.taskbeats.presentation.NewsListViewModel
+import com.comunidadedevspace.taskbeats.MainDispatcherRule
 import kotlinx.coroutines.runBlocking
 import org.junit.Rule
 import org.junit.Test
+import org.mockito.Mockito.mock
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 
@@ -27,7 +29,7 @@ class NewsListViewModelTest {
         runBlocking {
 
             //GIVEN
-        val expected = listOf(
+        val expectedTop = listOf(
             NewsDto(
                 id = "id1",
                 content = "content1",
@@ -35,15 +37,25 @@ class NewsListViewModelTest {
                 title = "title1"
             )
         )
-        val response = NewsResponse(data = expected, category = "tech")
-        whenever(service.fetchNews()).thenReturn(response)
+        val expectedAll = listOf(
+            NewsDto(
+                id = "id2",
+                content = "content2",
+                imageUrl = "image2",
+                title = "title2"
+            )
+        )
+        val topResponse = NewsResponse(data = expectedTop)
+        val allResponse = NewsResponse(data = expectedAll)
+        whenever(service.fetchTopNews()).thenReturn(topResponse)
+        whenever(service.fetchAllNews()).thenReturn(allResponse)
 
         //WHEN
         underTest = NewsListViewModel(service)
         val result = underTest.newsListLiveData.getOrAwaitValue()
 
             //THEN
-        assert(result == expected)
+        assert(result == expectedTop + expectedAll)
 
     }
 
