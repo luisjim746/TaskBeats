@@ -5,7 +5,7 @@ BMI Calculator has been a project developed to enhance the user experience of a 
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="/result/Screenshot_20240429_175625.png" width="260">&emsp;<img src="/result/Screenshot_20240418_200127.png" width="260">&emsp;<img src="/result/Screenshot_20240418_200254.png" width="260">
+<img src="/result/Screenshot_20240501_134451.png" width="260">&emsp;<img src="/result/Screenshot_20240501_134527.png" width="260">&emsp;<img src="/result/Screenshot_20240501_134602.png" width="260">
 
 ## Tecnologies
 * Kotlin
