@@ -17,8 +17,8 @@ BMI Calculator has been a project developed to enhance the user experience of a 
     - Toolbar
 - CRUD
 - MVVM architecture
-- FindViewById to retrieve UI components
-- String resource for text concatenation
+- Coroutines to facilitate asynchronous programming and allow tasks to be performed in the background more efficiently
+- Retrofit to consume a RESTful API and facilitate the reception of information from a backend
 
 
 ### TODO
