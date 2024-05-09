@@ -1,5 +1,5 @@
 # TaskBeats
-BMI Calculator has been a project developed to enhance the user experience of a previous one; it has been an improvement.
+This project consists of a mobile application designed as a task organizer, offering users the ability to create, edit, and delete tasks. Additionally, the application integrates a fragment dedicated to presenting current news, thus providing a comprehensive experience for managing and updating information for the user.
 
 
 
@@ -19,6 +19,8 @@ BMI Calculator has been a project developed to enhance the user experience of a 
 - MVVM architecture
 - Coroutines to facilitate asynchronous programming and allow tasks to be performed in the background more efficiently
 - Retrofit to consume a RESTful API and facilitate the reception of information from a backend
+- JSon
+- Fragment
 
 
 ### TODO
